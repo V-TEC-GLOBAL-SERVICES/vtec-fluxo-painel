@@ -1,27 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pedidos — V-TEC Fluxo</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
-<script src="js/tema.js"></script>
-<link rel="stylesheet" href="css/variaveis.css">
-<link rel="stylesheet" href="css/layout.css">
-<link rel="stylesheet" href="css/componentes.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pedidos — V-TEC Fluxo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap"
+    rel="stylesheet">
+  <script src="js/tema.js"></script>
+  <link rel="stylesheet" href="css/variaveis.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
 </head>
+
 <body data-pagina="pedidos" data-titulo="Pedidos">
-<main id="conteudo-principal" tabindex="-1">
-<div class="barra-ferramentas">
-  <div class="campo campo--pesquisa"><label class="visualmente-oculto" for="pesquisa-pedidos">Pesquisar pedidos</label><input type="search" id="pesquisa-pedidos" placeholder="Pesquisar por número do pedido ou cliente"></div>
-  <div class="campo"><label class="visualmente-oculto" for="filtro-estado-pedidos">Filtrar por estado</label><select id="filtro-estado-pedidos"><option value="todos">Todos os estados</option><option value="abertos">Em aberto</option><option value="pendente">Pendente</option><option value="preparacao">Em preparação</option><option value="pronto">Pronto</option><option value="concluido">Concluído</option><option value="cancelado">Cancelado</option></select></div>
-</div>
-<div class="cartao cartao--tabela"><table class="tabela" id="tabela-pedidos"><thead><tr><th>Pedido</th><th>Cliente</th><th>Produtos</th><th>Total</th><th>Pagamento</th><th>Entrega</th><th>Estado</th><th>Data</th><th><span class="visualmente-oculto">Ações</span></th></tr></thead><tbody id="corpo-tabela-pedidos"></tbody></table><div class="estado-vazio" id="vazio-pedidos" hidden></div></div>
-</main>
-<script src="js/dados-demonstrativos.js"></script>
-<script src="js/componentes.js"></script>
-<script src="js/pedidos.js"></script>
+  <main id="conteudo-principal" tabindex="-1">
+    <div class="barra-ferramentas">
+      <div class="campo campo--pesquisa"><label class="visualmente-oculto" for="pesquisa-pedidos">Pesquisar
+          pedidos</label><input type="search" id="pesquisa-pedidos"
+          placeholder="Pesquisar por número do pedido ou cliente"></div>
+      <div class="campo"><label class="visualmente-oculto" for="filtro-estado-pedidos">Filtrar por estado</label><select
+          id="filtro-estado-pedidos">
+          <option value="todos">Todos os estados</option>
+          <option value="abertos">Em aberto</option>
+          <option value="pendente">Pendente</option>
+          <option value="preparacao">Em preparação</option>
+          <option value="pronto">Pronto</option>
+          <option value="concluido">Concluído</option>
+          <option value="cancelado">Cancelado</option>
+        </select></div>
+    </div>
+    <div class="cartao cartao--tabela">
+      <table class="tabela" id="tabela-pedidos">
+        <thead>
+          <tr>
+            <th>Pedido</th>
+            <th>Cliente</th>
+            <th>Produtos</th>
+            <th>Total</th>
+            <th>Pagamento</th>
+            <th>Entrega</th>
+            <th>Estado</th>
+            <th>Data</th>
+            <th><span class="visualmente-oculto">Ações</span></th>
+          </tr>
+        </thead>
+        <tbody id="corpo-tabela-pedidos"></tbody>
+      </table>
+      <div class="estado-vazio" id="vazio-pedidos" hidden></div>
+    </div>
+  </main>
+  <script src="js/dados-demonstrativos.js"></script>
+  <script src="js/componentes.js"></script>
+  <script src="js/pedidos.js"></script>
 </body>
+
 </html>

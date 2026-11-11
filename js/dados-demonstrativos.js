@@ -15,12 +15,21 @@
       endereco: 'Endereço de exemplo, Luanda',
       assinatura: {
         plano: 'Plano demonstrativo', estado: 'ativa', valor: 25000, periodicidade: 'mensal',
-        inicio: antes(200 * dia), validade: new Date(agora + 12 * dia).toISOString(), renovacaoAutomatica: true
+        inicio: antes(108 * dia), validade: new Date(agora + 12 * dia).toISOString(), renovacaoAutomatica: true
       },
+      historicoAssinaturas: [
+        { id: 'ASS-002', plano: 'Plano demonstrativo', inicio: antes(108 * dia), fim: new Date(agora + 12 * dia).toISOString(), valor: 25000, estado: 'ativa' },
+        { id: 'ASS-001', plano: 'Plano inicial (exemplo)', inicio: antes(200 * dia), fim: antes(110 * dia), valor: 18000, estado: 'encerrada' }
+      ],
       pagamentos: [
-        { id: 'PAG-0003', data: antes(18 * dia), valor: 25000, estado: 'pago' },
-        { id: 'PAG-0002', data: antes(48 * dia), valor: 25000, estado: 'pago' },
-        { id: 'PAG-0001', data: antes(78 * dia), valor: 25000, estado: 'pago' }
+        { id: 'PAG-0008', data: antes(18 * dia), plano: 'Plano demonstrativo', valor: 25000, estado: 'pago' },
+        { id: 'PAG-0007', data: antes(48 * dia), plano: 'Plano demonstrativo', valor: 25000, estado: 'pago' },
+        { id: 'PAG-0006', data: antes(78 * dia), plano: 'Plano demonstrativo', valor: 25000, estado: 'pago' },
+        { id: 'PAG-0005', data: antes(107 * dia), plano: 'Plano demonstrativo', valor: 25000, estado: 'pago' },
+        { id: 'PAG-0004', data: antes(108 * dia), plano: 'Plano demonstrativo', valor: 25000, estado: 'falhado' },
+        { id: 'PAG-0003', data: antes(138 * dia), plano: 'Plano inicial (exemplo)', valor: 18000, estado: 'pago' },
+        { id: 'PAG-0002', data: antes(168 * dia), plano: 'Plano inicial (exemplo)', valor: 18000, estado: 'pago' },
+        { id: 'PAG-0001', data: antes(198 * dia), plano: 'Plano inicial (exemplo)', valor: 18000, estado: 'pago' }
       ]
     },
     produtos: [

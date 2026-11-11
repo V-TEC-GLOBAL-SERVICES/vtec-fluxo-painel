@@ -9,6 +9,7 @@
     pedidos: '<path d="M6 2 4 6v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V6l-2-4z"/><path d="M4 6h16M9 10a3 3 0 0 0 6 0"/>',
     passagens: '<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9 11h6M9 14h3"/>',
     catalogo: '<path d="m21 8-9-5-9 5v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/>',
+    assinaturas: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/>',
     conta: '<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
     menu: '<path d="M4 6h16M4 12h16M4 18h16"/>',
     lua: '<path d="M21 13A9 9 0 1 1 11 3a7 7 0 0 0 10 10z"/>',
@@ -32,7 +33,7 @@
   };
   var ESTADOS_EM_ABERTO = ['pendente', 'preparacao', 'pronto'];
 
-  var formatoMoeda = new Intl.NumberFormat('pt-PT', { style: 'currency', currency: 'AOA' });
+  var formatoNumero = new Intl.NumberFormat('pt-PT', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
   var formatoDataHora = new Intl.DateTimeFormat('pt-PT', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' });
   var formatoData = new Intl.DateTimeFormat('pt-PT', { day: '2-digit', month: 'short', year: 'numeric' });
   var formatoRelativo = new Intl.RelativeTimeFormat('pt-PT', { numeric: 'auto' });
@@ -43,7 +44,7 @@
   function escapar(texto) {
     return String(texto).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; });
   }
-  function moeda(valor) { return formatoMoeda.format(valor); }
+  function moeda(valor) { return formatoNumero.format(valor) + '\u00A0Kz'; }
   function dataHora(iso) { return formatoDataHora.format(new Date(iso)); }
   function dataCurta(iso) { return formatoData.format(new Date(iso)); }
   function tempoRelativo(iso) {
@@ -142,6 +143,7 @@
     { id: 'pedidos', rotulo: 'Pedidos', href: 'pedidos.html' },
     { id: 'passagens', rotulo: 'Passagens', href: 'passagens.html' },
     { id: 'catalogo', rotulo: 'Catálogo', href: 'catalogo.html' },
+    { id: 'assinaturas', rotulo: 'Assinaturas', href: 'assinaturas.html' },
     { id: 'conta', rotulo: 'Conta', href: 'conta.html' }
   ];
   var MARCA_SVG = '<svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M9 11l7 11 7-11" fill="none" stroke="var(--sobre-destaque)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>';

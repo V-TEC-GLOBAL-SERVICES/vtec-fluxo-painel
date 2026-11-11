@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assinaturas — V-TEC Fluxo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap"
+    rel="stylesheet">
+  <script src="js/tema.js"></script>
+  <link rel="stylesheet" href="css/variaveis.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+
+<body data-pagina="assinaturas" data-titulo="Assinaturas">
+  <main id="conteudo-principal" tabindex="-1">
+    <section class="indicadores" id="indicadores-assinatura" aria-label="Resumo da assinatura"></section>
+    <section class="cartao cartao--tabela" style="margin-bottom:20px" aria-labelledby="titulo-historico-assinaturas">
+      <div style="padding:20px 20px 12px">
+        <h2 class="cartao__titulo" id="titulo-historico-assinaturas">Histórico de assinaturas</h2>
+        <p class="cartao__texto" style="margin:0">Os planos que já contratou na plataforma.</p>
+      </div>
+      <table class="tabela">
+        <thead>
+          <tr>
+            <th>Referência</th>
+            <th>Plano</th>
+            <th>Período</th>
+            <th>Valor mensal</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody id="corpo-historico-assinaturas"></tbody>
+      </table>
+    </section>
+    <section class="cartao cartao--tabela" aria-labelledby="titulo-historico-pagamentos">
+      <div style="padding:20px 20px 12px">
+        <h2 class="cartao__titulo" id="titulo-historico-pagamentos">Histórico de pagamentos</h2>
+        <p class="cartao__texto" style="margin:0 0 14px">Todos os pagamentos dos planos da plataforma.</p>
+        <div class="separadores" id="separadores-pagamentos" role="group" aria-label="Filtrar pagamentos"><button
+            type="button" data-filtro="todos" aria-pressed="true">Todos</button><button type="button" data-filtro="pago"
+            aria-pressed="false">Pagos</button><button type="button" data-filtro="pendente"
+            aria-pressed="false">Pendentes</button><button type="button" data-filtro="falhado"
+            aria-pressed="false">Falhados</button></div>
+      </div>
+      <table class="tabela" id="tabela-pagamentos">
+        <thead>
+          <tr>
+            <th>Referência</th>
+            <th>Data</th>
+            <th>Plano</th>
+            <th>Valor</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody id="corpo-historico-pagamentos"></tbody>
+      </table>
+      <div class="estado-vazio" id="vazio-pagamentos" hidden></div>
+      <p class="nota" style="margin:0 20px 20px">Recibos e faturas serão disponibilizados quando o serviço de pagamentos
+        for integrado.</p>
+    </section>
+  </main>
+  <script src="js/dados-demonstrativos.js"></script>
+  <script src="js/componentes.js"></script>
+  <script src="js/assinaturas.js"></script>
+</body>
+
+</html>

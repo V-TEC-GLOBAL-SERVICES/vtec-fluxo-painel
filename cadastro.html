@@ -1,38 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Criar conta — V-TEC Fluxo</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
-<script src="js/tema.js"></script>
-<link rel="stylesheet" href="css/variaveis.css">
-<link rel="stylesheet" href="css/layout.css">
-<link rel="stylesheet" href="css/componentes.css">
-<link rel="stylesheet" href="css/autenticacao.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Criar conta — V-TEC Fluxo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap"
+    rel="stylesheet">
+  <script src="js/tema.js"></script>
+  <link rel="stylesheet" href="css/variaveis.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/autenticacao.css">
 </head>
+
 <body class="pagina-autenticacao">
-<button type="button" class="botao-icone autenticacao__tema" id="botao-tema"></button>
-<main class="autenticacao cartao" style="padding:32px 28px">
-  <a class="marca" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M9 11l7 11 7-11" fill="none" stroke="var(--sobre-destaque)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="marca__nome">V-TEC <span>Fluxo</span></span></a>
-  <div class="autenticacao__cabecalho"><h1>Criar conta</h1><p>Registe a sua empresa para começar.</p></div>
-  <form id="formulario-cadastro" novalidate>
-    <div id="alerta-cadastro" class="alerta-erro" role="alert" hidden>Corrija os campos assinalados para continuar.</div>
-    <div id="aviso-cadastro" class="alerta-informacao" role="status" hidden>Os dados estão válidos, mas a conta ainda não foi criada: o registo será ligado ao backend numa fase futura.</div>
-    <div class="campo"><label for="campo-nome-completo">Nome completo</label><input type="text" id="campo-nome-completo" autocomplete="name" aria-describedby="erro-nome-completo"><span class="campo__erro" id="erro-nome-completo" hidden></span></div>
-    <div class="campo"><label for="campo-nome-empresa">Nome da empresa ou negócio</label><input type="text" id="campo-nome-empresa" autocomplete="organization" aria-describedby="erro-nome-empresa"><span class="campo__erro" id="erro-nome-empresa" hidden></span></div>
-    <div class="campo"><label for="campo-identificador">E-mail ou telefone</label><input type="text" id="campo-identificador" autocomplete="username" inputmode="email" placeholder="nome@empresa.com ou +244…" aria-describedby="erro-identificador"><span class="campo__erro" id="erro-identificador" hidden></span></div>
-    <div class="campo"><label for="campo-nova-senha">Palavra-passe</label><div class="campo-senha"><input type="password" id="campo-nova-senha" autocomplete="new-password" data-rotulo="a palavra-passe" aria-describedby="ajuda-senha erro-nova-senha"><button type="button" data-alternar-senha="campo-nova-senha" aria-label="Mostrar a palavra-passe"></button></div><span class="campo__ajuda" id="ajuda-senha">Mínimo de 8 caracteres.</span><span class="campo__erro" id="erro-nova-senha" hidden></span></div>
-    <div class="campo"><label for="campo-confirmar-senha">Confirmar palavra-passe</label><div class="campo-senha"><input type="password" id="campo-confirmar-senha" autocomplete="new-password" data-rotulo="a confirmação" aria-describedby="erro-confirmar-senha"><button type="button" data-alternar-senha="campo-confirmar-senha" aria-label="Mostrar a confirmação"></button></div><span class="campo__erro" id="erro-confirmar-senha" hidden></span></div>
-    <button type="submit" class="botao botao--primario">Criar conta</button>
-  </form>
-  <p class="autenticacao__rodape">Já tem conta? <a class="ligacao" href="index.html">Iniciar sessão</a></p>
-</main>
-<script src="js/dados-demonstrativos.js"></script>
-<script src="js/componentes.js"></script>
-<script src="js/validacao.js"></script>
-<script src="js/cadastro.js"></script>
+  <button type="button" class="botao-icone autenticacao__tema" id="botao-tema"></button>
+  <main class="autenticacao cartao" style="padding:32px 28px">
+    <a class="marca" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="9" fill="currentColor" />
+        <path d="M9 11l7 11 7-11" fill="none" stroke="var(--sobre-destaque)" stroke-width="3" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg><span class="marca__nome">V-TEC <span>Fluxo</span></span></a>
+    <div class="autenticacao__cabecalho">
+      <h1>Criar conta</h1>
+      <p>Registe a sua empresa para começar.</p>
+    </div>
+    <form id="formulario-cadastro" novalidate>
+      <div id="alerta-cadastro" class="alerta-erro" role="alert" hidden>Corrija os campos assinalados para continuar.
+      </div>
+      <div id="aviso-cadastro" class="alerta-informacao" role="status" hidden>Os dados estão válidos, mas a conta ainda
+        não foi criada: o registo será ligado ao backend numa fase futura.</div>
+      <div class="campo"><label for="campo-nome-completo">Nome completo</label><input type="text"
+          id="campo-nome-completo" autocomplete="name" aria-describedby="erro-nome-completo"><span class="campo__erro"
+          id="erro-nome-completo" hidden></span></div>
+      <div class="campo"><label for="campo-nome-empresa">Nome da empresa ou negócio</label><input type="text"
+          id="campo-nome-empresa" autocomplete="organization" aria-describedby="erro-nome-empresa"><span
+          class="campo__erro" id="erro-nome-empresa" hidden></span></div>
+      <div class="campo"><label for="campo-identificador">E-mail ou telefone</label><input type="text"
+          id="campo-identificador" autocomplete="username" inputmode="email" placeholder="nome@empresa.com ou +244…"
+          aria-describedby="erro-identificador"><span class="campo__erro" id="erro-identificador" hidden></span></div>
+      <div class="campo"><label for="campo-nova-senha">Palavra-passe</label>
+        <div class="campo-senha"><input type="password" id="campo-nova-senha" autocomplete="new-password"
+            data-rotulo="a palavra-passe" aria-describedby="ajuda-senha erro-nova-senha"><button type="button"
+            data-alternar-senha="campo-nova-senha" aria-label="Mostrar a palavra-passe"></button></div><span
+          class="campo__ajuda" id="ajuda-senha">Mínimo de 8 caracteres.</span><span class="campo__erro"
+          id="erro-nova-senha" hidden></span>
+      </div>
+      <div class="campo"><label for="campo-confirmar-senha">Confirmar palavra-passe</label>
+        <div class="campo-senha"><input type="password" id="campo-confirmar-senha" autocomplete="new-password"
+            data-rotulo="a confirmação" aria-describedby="erro-confirmar-senha"><button type="button"
+            data-alternar-senha="campo-confirmar-senha" aria-label="Mostrar a confirmação"></button></div><span
+          class="campo__erro" id="erro-confirmar-senha" hidden></span>
+      </div>
+      <button type="submit" class="botao botao--primario">Criar conta</button>
+    </form>
+    <p class="autenticacao__rodape">Já tem conta? <a class="ligacao" href="index.html">Iniciar sessão</a></p>
+  </main>
+  <script src="js/dados-demonstrativos.js"></script>
+  <script src="js/componentes.js"></script>
+  <script src="js/validacao.js"></script>
+  <script src="js/cadastro.js"></script>
 </body>
+
 </html>

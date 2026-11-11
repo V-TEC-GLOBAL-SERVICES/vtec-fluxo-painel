@@ -119,3 +119,5 @@ dialog.modal::backdrop{background:rgba(5,12,10,.55)}
 .tabela td:last-child{justify-content:flex-end;padding-top:10px}
 }
 @media (max-width:520px){.grelha-campos{grid-template-columns:minmax(0,1fr)}.barra-ferramentas__acao{margin-left:0;width:100%}.barra-ferramentas__acao .botao{width:100%}}
+.indicador>*{min-width:0}.indicador__valor{overflow-wrap:anywhere}
+.separadores{max-width:100%;overflow-x:auto}.separadores button{white-space:nowrap}

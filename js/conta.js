@@ -18,7 +18,7 @@
       '<dl class="lista-detalhes" style="margin-top:16px"><dt>Início</dt><dd>' + VTec.dataCurta(assinatura.inicio) + '</dd><dt>Válida até</dt><dd>' + VTec.dataCurta(assinatura.validade) + '</dd>' +
       '<dt>Renovação</dt><dd>' + (assinatura.renovacaoAutomatica ? 'Automática, na data de validade' : 'Manual — termina na data de validade') + '</dd></dl>';
     document.getElementById('botao-renovacao').textContent = assinatura.renovacaoAutomatica ? 'Desativar renovação automática' : 'Ativar renovação automática';
-    document.getElementById('corpo-pagamentos').innerHTML = conta.pagamentos.map(function (p) {
+    document.getElementById('corpo-pagamentos').innerHTML = conta.pagamentos.slice(0, 3).map(function (p) {
       var e = ESTADOS_PAGAMENTO[p.estado];
       return '<tr><td class="numero" data-rotulo="Referência">' + p.id + '</td><td data-rotulo="Data">' + VTec.dataCurta(p.data) + '</td><td data-rotulo="Valor">' + VTec.moeda(p.valor) + '</td><td data-rotulo="Estado">' + VTec.selo(e[0], e[1]) + '</td></tr>';
     }).join('');

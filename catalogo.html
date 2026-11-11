@@ -1,28 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Catálogo — V-TEC Fluxo</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
-<script src="js/tema.js"></script>
-<link rel="stylesheet" href="css/variaveis.css">
-<link rel="stylesheet" href="css/layout.css">
-<link rel="stylesheet" href="css/componentes.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo — V-TEC Fluxo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap"
+    rel="stylesheet">
+  <script src="js/tema.js"></script>
+  <link rel="stylesheet" href="css/variaveis.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
 </head>
+
 <body data-pagina="catalogo" data-titulo="Catálogo">
-<main id="conteudo-principal" tabindex="-1">
-<div class="barra-ferramentas">
-  <div class="campo campo--pesquisa"><label class="visualmente-oculto" for="pesquisa-produtos">Pesquisar produtos</label><input type="search" id="pesquisa-produtos" placeholder="Pesquisar produto"></div>
-  <div class="separadores" id="separadores-produtos" role="group" aria-label="Filtrar produtos"><button type="button" data-filtro="todos" aria-pressed="true">Todos</button><button type="button" data-filtro="disponiveis" aria-pressed="false">Disponíveis</button><button type="button" data-filtro="esgotados" aria-pressed="false">Esgotados</button></div>
-  <div class="barra-ferramentas__acao"><button type="button" class="botao botao--primario" id="botao-adicionar-produto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Adicionar produto</button></div>
-</div>
-<div class="grelha-produtos" id="grelha-produtos"></div>
-</main>
-<script src="js/dados-demonstrativos.js"></script>
-<script src="js/componentes.js"></script>
-<script src="js/catalogo.js"></script>
+  <main id="conteudo-principal" tabindex="-1">
+    <div class="barra-ferramentas">
+      <div class="campo campo--pesquisa"><label class="visualmente-oculto" for="pesquisa-produtos">Pesquisar
+          produtos</label><input type="search" id="pesquisa-produtos" placeholder="Pesquisar produto"></div>
+      <div class="separadores" id="separadores-produtos" role="group" aria-label="Filtrar produtos"><button
+          type="button" data-filtro="todos" aria-pressed="true">Todos</button><button type="button"
+          data-filtro="disponiveis" aria-pressed="false">Disponíveis</button><button type="button"
+          data-filtro="esgotados" aria-pressed="false">Esgotados</button></div>
+      <div class="barra-ferramentas__acao"><button type="button" class="botao botao--primario"
+          id="botao-adicionar-produto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" aria-hidden="true">
+            <path d="M12 5v14M5 12h14" />
+          </svg>Adicionar produto</button></div>
+    </div>
+    <div class="grelha-produtos" id="grelha-produtos"></div>
+  </main>
+  <script src="js/dados-demonstrativos.js"></script>
+  <script src="js/componentes.js"></script>
+  <script src="js/catalogo.js"></script>
 </body>
+
 </html>
