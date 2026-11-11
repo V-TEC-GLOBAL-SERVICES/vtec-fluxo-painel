@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Iniciar sessão — V-TEC Fluxo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<script src="js/tema.js"></script>
+<link rel="stylesheet" href="css/variaveis.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/componentes.css">
+<link rel="stylesheet" href="css/autenticacao.css">
+</head>
+<body class="pagina-autenticacao">
+<button type="button" class="botao-icone autenticacao__tema" id="botao-tema"></button>
+<main class="autenticacao cartao" style="padding:32px 28px">
+  <a class="marca" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M9 11l7 11 7-11" fill="none" stroke="var(--sobre-destaque)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="marca__nome">V-TEC <span>Fluxo</span></span></a>
+  <div class="autenticacao__cabecalho"><h1>Iniciar sessão</h1><p>Aceda ao painel da sua empresa.</p></div>
+  <form id="formulario-autenticacao" novalidate>
+    <div id="alerta-autenticacao" class="alerta-erro" role="alert" hidden></div>
+    <div class="campo"><label for="campo-email">E-mail ou telefone</label><input type="text" id="campo-email" autocomplete="username" inputmode="email" placeholder="nome@empresa.com ou +244…"></div>
+    <div class="campo"><label for="campo-senha">Palavra-passe</label>
+      <div class="campo-senha"><input type="password" id="campo-senha" autocomplete="current-password" required><button type="button" id="botao-ver-senha" aria-label="Mostrar palavra-passe"></button></div></div>
+    <div class="autenticacao__linha"><button type="button" class="ligacao" id="botao-recuperar-senha">Esqueceu a palavra-passe?</button></div>
+    <button type="submit" class="botao botao--primario" id="botao-entrar">Iniciar sessão</button>
+  </form>
+  <p class="autenticacao__rodape">Ainda não tem conta? <a class="ligacao" href="cadastro.html">Criar conta</a></p>
+  <p class="nota">Acesso de demonstração (sem backend): <strong>demo@vtecfluxo.exemplo</strong> / <strong>demonstracao123</strong></p>
+</main>
+<script src="js/dados-demonstrativos.js"></script>
+<script src="js/componentes.js"></script>
+<script src="js/validacao.js"></script>
+<script src="js/autenticacao.js"></script>
+</body>
+</html>

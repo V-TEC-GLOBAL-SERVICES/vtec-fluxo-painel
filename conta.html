@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conta — V-TEC Fluxo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<script src="js/tema.js"></script>
+<link rel="stylesheet" href="css/variaveis.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/componentes.css">
+</head>
+<body data-pagina="conta" data-titulo="Conta">
+<main id="conteudo-principal" tabindex="-1">
+<div class="duas-colunas">
+<section class="cartao" aria-labelledby="titulo-informacoes"><h2 class="cartao__titulo" id="titulo-informacoes">Informações da conta</h2><p class="cartao__texto">Dados do responsável e da empresa.</p>
+<form id="formulario-conta" novalidate><div class="grelha-campos" id="campos-conta"></div><div class="grupo-acoes"><button type="submit" class="botao botao--primario">Guardar alterações</button></div></form></section>
+<div style="display:grid;gap:20px">
+<section class="cartao" aria-labelledby="titulo-assinatura"><h2 class="cartao__titulo" id="titulo-assinatura">Assinatura</h2><p class="cartao__texto">O seu plano atual no V-TEC Fluxo (dados de exemplo).</p><div id="resumo-assinatura"></div>
+<div class="grupo-acoes"><button type="button" class="botao botao--primario" id="botao-alterar-plano">Alterar plano</button><button type="button" class="botao botao--secundario" id="botao-renovacao"></button></div></section>
+<section class="cartao cartao--tabela" aria-labelledby="titulo-pagamentos"><div style="padding:20px 20px 12px"><h2 class="cartao__titulo" id="titulo-pagamentos">Histórico de pagamentos</h2></div>
+<table class="tabela"><thead><tr><th>Referência</th><th>Data</th><th>Valor</th><th>Estado</th></tr></thead><tbody id="corpo-pagamentos"></tbody></table></section>
+</div></div>
+</main>
+<script src="js/dados-demonstrativos.js"></script>
+<script src="js/componentes.js"></script>
+<script src="js/conta.js"></script>
+</body>
+</html>
